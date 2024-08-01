@@ -1,0 +1,19 @@
+before starting :
+
+- npm install
+- npm audit 
+- npm audit fix
+
+
+in FRONTEND:
+    npm start (for react in localhost)
+
+in BACKEND:
+    make clean
+    make (doesnt work lol)
+
+FIXME: 
+    include broken for http_listener.h
+
+TODO: 
+    test makefile on local system for yourself, see if it works
