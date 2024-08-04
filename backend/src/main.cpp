@@ -91,9 +91,9 @@ int main() {
 
     try {
         listener.open().then([&listener, &addr]() {
-            wcout << L"Listening at: " << addr << endl;
+            cout << "Listening at: " << addr.c_str() << endl;
         }).wait();
-        wcout << L"Press ENTER to exit." << endl;
+        cout << "Press ENTER to exit." << endl;
         string line;
         getline(cin, line);
     } catch (const exception& e) {
