@@ -9,7 +9,7 @@ struct AVLNode {
     std::shared_ptr<AVLNode> right;
     int height;
 
-    AVLNode(Const Car& car);
+    AVLNode(const Car& car);
 };
 
 class AVLTree {

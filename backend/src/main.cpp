@@ -1,4 +1,4 @@
-#include "../vcpkg/installed/x64-windows/include/cpprest/http_listener.h"
+#include <cpprest/http_listener.h>
 #include <cpprest/json.h>
 #include <iostream>
 #include <vector>

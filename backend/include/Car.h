@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-
+using namespace std;
 // Car struct definition, member vars are the columns in the data csv that we need/want
 struct Car {
     string id;
