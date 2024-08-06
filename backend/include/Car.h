@@ -19,4 +19,9 @@ struct Car {
     string image_url;
     string state;
     string posting_date;
+    // double value;
+
+    // Car{id, region, price, year, manufacturer, model, condition, odometer, VIN, drive, type, paint_color, state, posting_date};
+
+    // findValue();
 };
