@@ -1,7 +1,4 @@
-.Makefile
-
 backend/data/vehicles.csv
-
 build/
 *.o
 *.log
