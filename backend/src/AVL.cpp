@@ -2,6 +2,7 @@
 #include <iostream> 
 #include <algorithm>
 #include <unordered_set>
+#include <functional>
 
 AVLNode::AVLNode(const Car& car) : car(car), left(nullptr), right(nullptr), height(1) {}
 
@@ -81,13 +82,43 @@ void AVLTree::printUniqueModels() const {
 }
 
 void AVLTree::printInOrder(std::shared_ptr<AVLNode> node, std::unordered_set<std::string>& models) const {
+    static size_t max_length = 0;
+    static size_t console_width = 80;
+    static size_t columns = 0;
+    static size_t count = 0;
+
+    if (max_length == 0) {
+        // Calculate the longest model length
+        std::function<void(std::shared_ptr<AVLNode>)> findMaxLength = [&](std::shared_ptr<AVLNode> node) {
+            if (node) {
+                findMaxLength(node->left);
+                if (node->car.model.length() > max_length) {
+                    max_length = node->car.model.length();
+                }
+                findMaxLength(node->right);
+            }
+        };
+        findMaxLength(node);
+        columns = console_width / (max_length + 4); // 4 is for padding and border
+    }
+
     if (node) {
         printInOrder(node->left, models);
         if (models.find(node->car.model) == models.end()) {
-            std::cout << "\n|" << node->car.model << " | ";
+            std::cout << "| " << node->car.model;
+            // Add padding to align columns
+            std::cout << std::string(max_length - node->car.model.length(), ' ') << " | ";
             models.insert(node->car.model);
+            count++;
+            if (count % columns == 0) {
+                std::cout << "\n";
+            }
         }
         printInOrder(node->right, models);
+    }
+
+    if (node == nullptr && count % columns != 0) {
+        std::cout << "\n";
     }
 }
 

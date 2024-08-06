@@ -9,6 +9,8 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "regex": "cpp",
+        "format": "cpp"
     }
 }
