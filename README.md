@@ -36,4 +36,4 @@
 
 ** Video Demo **
 
-`[LINK](https://www.youtube.com/watch?v=QvmcvuQ6Jyk)`
+[Video Link](https://www.youtube.com/watch?v=QvmcvuQ6Jyk)
