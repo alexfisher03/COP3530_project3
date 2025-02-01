@@ -33,3 +33,7 @@
 4. Finally, run `make && ./build/car_cache`
 
 5. For the most effective usage, full-screen the terminal
+
+** Video Demo **
+
+`[LINK](https://www.youtube.com/watch?v=QvmcvuQ6Jyk)`
